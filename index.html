@@ -5,11 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Find the buried Treasure!</title>
+    <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
     <h1 id="heading">Find the buried Treasure!</h1>
     <img id="map" width="100%" src="images/background.png">
-   <!---<img id="treasure" width="3%" src="images/gold.jpg">--->
+    <img id="treasure" width="3%" src="images/gold.jpg">
 
     <p id="distance"></p>
 
@@ -37,8 +38,13 @@
                 left:event.pageX,
                 top:event.pageY
             });
+            
             if(distance < 14) {
-                alert("Found the treasure in " + clicks + " clicks!");
+                $("#treasure").offset({
+                left: event.pageX,
+                top: event.pageY
+              });
+                alert("You Found the treasure!");//" in " + clicks + " clicks!");
             }
         });
 
