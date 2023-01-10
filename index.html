@@ -10,7 +10,7 @@
 <body>
     <h1 id="heading">Find the buried Treasure!</h1>
     <img id="map" width="100%" src="images/background.png">
-    <img id="treasure" width="3%" src="images/gold.jpg">
+    <img id="treasure" width="5%" src="images/gold.jpg">
 
     <p id="distance"></p>
 
@@ -44,7 +44,7 @@
                 left: event.pageX,
                 top: event.pageY
               });
-                alert("You Found the treasure!");//" in " + clicks + " clicks!");
+                alert("You Found the Treasure!");//" in " + clicks + " clicks!");
             }
         });
 
@@ -56,7 +56,7 @@
 
         var getDistanceHint = function(distance){
             if(distance < 15) {
-                return "Boiling hot!";
+                return "";
             } else if(distance < 20) {
                 return "Really hot";
             } else if(distance < 40) {
